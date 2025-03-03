@@ -56,4 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'scale(1)';
         });
     }
+    
+    // Gallery image interactions
+    const galleryImages = document.querySelectorAll('.gallery-container img');
+    if (galleryImages.length > 0) {
+        // Add click event to gallery images
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                // You could implement a lightbox here or other functionality
+                this.classList.toggle('selected');
+            });
+        });
+    }
 }); 
